@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-  <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  <body class="fxos-tweets">
+    <div class="">
+
+    </div>
+    <footer class="fxos-tweets__footer"></footer>
   </body>
 </html>
