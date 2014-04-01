@@ -26,3 +26,6 @@ node_modules
 
 # Sass compiled
 .sass-cache
+
+# Generated app CSS
+public/stylesheets/style.css

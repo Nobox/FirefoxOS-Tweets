@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body class="fxos-tweets">
-    <div class="">
-
+    <div class="fxos-tweets__stage">
+        <img class="fxos-tweets__logo" src="/svg/logo-fxos.svg" alt="Firefox OS">
+        <div class="fxos-tweets__fox">
+        </div>
+        <div class="fxos-tweets__phone">
+        </div>
     </div>
     <footer class="fxos-tweets__footer"></footer>
   </body>
