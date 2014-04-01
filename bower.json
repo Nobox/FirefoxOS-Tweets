@@ -1,0 +1,13 @@
+{
+  "name": "FirefoxOS-Tweets",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Nobox/FirefoxOS-Tweets",
+  "authors": [
+    "Waldemar Figueroa <waldemar@nobox.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "scut": "~0.10.2"
+  }
+}

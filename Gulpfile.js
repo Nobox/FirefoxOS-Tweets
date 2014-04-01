@@ -14,13 +14,17 @@ var path        = {};
     path.scss   = path.assets + '/scss';
     path.public = 'public';
     path.css    = path.public + '/stylesheets';
-
+    path.bower   = path.public + '/bower_components'
 
 /* Stylesheets: SCSS compilation and pass through Autoprefixer */
 gulp.task('scss', function () {
     gulp.src([path.scss + '/**/*.scss'])
         .pipe(plumber()) // catch errors
-        .pipe(sass({style: 'expanded'}))
+        .pipe(sass({
+            loadPath: [path.bower],
+            style: 'expanded'
+        }))
+        .pipe(prefix('last 2 versions'))
         .pipe(gulp.dest(path.css));
 });
 
