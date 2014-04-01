@@ -1,16 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html class="fxos-tweets">
   <head>
     <meta charset="utf-8">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
-  <body class="fxos-tweets">
+  <body>
     <div class="fxos-tweets__stage">
         <img class="fxos-tweets__logo" src="/svg/logo-fxos.svg" alt="Firefox OS">
         <div class="fxos-tweets__fox">
         </div>
-        <div class="fxos-tweets__phone">
+        <div class="fxos-phone">
+            <div class="fxos-phone__feed">
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. Lorem ipsum Firefox sit amet, consectetur adipscing elit lorem ipsum. <a href="#">#firefoxOS</a></p>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+                <article class="fxos-tweet">
+                    <div class="fxos-tweet__content">
+                        <h1 class="fxos-tweet__user">Sample User</h1>
+                        <img
+                         class="fxos-tweet__avatar"
+                         src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
+                         alt="User's profile avatar">
+                        <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
+                    </div>
+                    <footer class="fxos-tweet__footer">
+                        <time datetime="">1 Apr 2013</time>
+                    </footer>
+                </article>
+            </div>
         </div>
     </div>
     <footer class="fxos-tweets__footer"></footer>

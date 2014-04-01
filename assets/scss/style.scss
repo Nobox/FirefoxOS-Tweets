@@ -4,6 +4,7 @@
 
 @import "scut/dist/scut";
 @import "variables";
+@import "fonts";
 
 // Poor man's reset.
 *, *:before, *:after {
@@ -15,57 +16,129 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    font-family: $opensans-font-stack;
 }
 
+// Scale app for different screens using font-size and rems
 .fxos-tweets {
     background: $gradient-fxos-blue;
+    font-size: 12px;
+
+    @media only screen and (min-height: 768px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (min-height: 900px) {
+        font-size: 16px;
+    }
+
+    @media only screen and (min-height: 1100px) {
+        font-size: 18px;
+    }
+}
+
+a:link, a:visited {
+    color: $primary-color;
+    text-decoration: none;
 }
 
     .fxos-tweets__stage {
-        position: relative;
-        margin: 80px auto 0;
-        width: 1000px;
+        width: scut-rem(1000px);
+        @extend %scut-center-transform;
     }
 
     .fxos-tweets__logo {
-        position: absolute;
-        top: 0;
-        left: 160px;
-        width: 298px;
-        height: 92px;
+        @include scut-size(scut-rem(298px 92px));
+        @include scut-absolute(scut-rem(50px) n n scut-rem(160px));
     }
 
     .fxos-tweets__fox {
         float: left;
-        margin-top: 75px;
-        width: 521px;
-        height: 515px;
-        background-image: url("../images/bg-fxos-fox.png")
-    }
-
-    .fxos-tweets__phone {
-        float: right;
-        width: 463px;
-        height: 876px;
-        background-image: url("../images/bg-fxos-phone.png");
+        margin-top: scut-rem(150px);
+        background-image: url("../images/bg-fxos-fox.png");
+        background-size: 100%;
+        @include scut-size(scut-rem(521px 515px));
     }
 
     // Footer bar with sandstone light grey gradient
     .fxos-tweets__footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 20%;
+        z-index: 100;
+        height: scut-rem(215px);
         background: $gradient-sandstone-light-grey;
-        box-shadow: 0 0 45px rgba(0,0,0,.25);
+        box-shadow: 0 0 scut-rem(45px) rgba(0,0,0,.25);
+        @include scut-absolute(n 0 0 0);
 
         // Sandstone grain overlay
         &:after {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            @extend %scut-absolute;
             background: url("../images/grain.png");
             content: '';
+            @include scut-size(100%);
         }
+    }
+
+
+.fxos-phone {
+    position: relative;
+    float: right;
+    background-image: url("../images/bg-fxos-phone.png");
+    background-size: 100%;
+    @include scut-size(scut-rem(463px 876px));
+}
+
+    .fxos-phone__feed {
+        overflow: hidden;
+        @include scut-absolute(scut-rem(130px 31px 129px 30px));
+
+        &:before {
+            z-index: 1;
+            box-shadow: inset scut-rem(0 2px 3px 2px) rgba(0,0,0,.75);
+            border-radius: 5px;
+            content: '';
+            @include scut-absolute(0 0 0 0);
+        }
+    }
+
+// Tweet module
+.fxos-tweet {
+    position: relative;
+    margin: scut-rem(3px 5px 3px 45px);
+    background: #fff;
+    box-shadow: scut-rem(0 2px 1px) rgba(0,0,0,.30);
+    color: #4d4e53;
+    font-style: italic;
+}
+
+    .fxos-tweet__content {
+        padding: scut-rem(10px 0 0 50px);
+        min-height: scut-rem(95px);
+
+        p {
+            margin-bottom: scut-rem(10px);
+        }
+    }
+
+    .fxos-tweet__user {
+        color: #4d4e53;
+        font-size: scut-rem(26px);
+        font-style: italic;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .fxos-tweet__avatar {
+        display: block;
+        padding: scut-rem(4px);
+        background: $primary-color;
+        border-radius: 1000px;
+        box-shadow: scut-rem(0 2px 0) rgba(0,0,0,.7), inset scut-rem(0 0 2px) rgba(255,255,255,.75);
+        @include scut-absolute(scut-rem(15px) n n scut-rem(-38px));
+        @include scut-size(scut-rem(75px));
+    }
+
+    .fxos-tweet__footer {
+        padding: scut-rem(5px);
+        border-top: 1px solid #e0e0e0;
+        font-size: scut-rem(12px);
+        color: #a6a6a6;
     }
