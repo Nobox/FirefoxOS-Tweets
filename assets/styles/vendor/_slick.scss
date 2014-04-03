@@ -1,0 +1,82 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-touch-callout: none;
+    user-select: none;
+    touch-action: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+
+        img {
+            pointer-events: none;
+        }
+    }
+}
+
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide img {
+    transform: translate3d(0,0,0);
+}
+
+.slick-track {
+
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+
+    img { display: block }
+
+    .slick-initialized & { display: table-cell; }
+}
+
+
+/* Loading States */
+
+.slick-loading {
+    .slick-track,
+    .slick-slide {
+        visibility: hidden;
+    }
+
+    .slick-list {
+        background: #fff url(./ajax-loader.gif) center center no-repeat;
+    }
+}
+
+.slick-slide.loading {
+    position: relative;
+    background:  url(./ajax-loader.gif) center center no-repeat;
+}
+
+/* Vertical */
+
+.slick-vertical {
+    .slide-track {
+        display: block;
+    }
+    .slick-slide {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}

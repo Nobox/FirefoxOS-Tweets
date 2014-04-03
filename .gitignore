@@ -28,7 +28,10 @@ node_modules
 .sass-cache
 
 # Generated app CSS
-public/stylesheets/style.css
+public/stylesheets/**
+
+# Generated Browserify bundle
+public/javascripts/**
 
 # Bower
 bower_components

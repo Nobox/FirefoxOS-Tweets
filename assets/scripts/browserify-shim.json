@@ -1,0 +1,13 @@
+{
+    "jquery": {
+        "path": "public/bower_components/jquery/jquery.js",
+        "exports": "$"
+    },
+    "jquery.animate-enhanced": {
+        "path": "public/bower_components/jquery.animate-enhanced/scripts/src/jquery.animate-enhanced",
+        "exports": null,
+        "depends": {
+            "jquery": "$"
+        }
+    }
+}

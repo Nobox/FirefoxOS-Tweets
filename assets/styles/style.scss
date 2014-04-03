@@ -77,6 +77,9 @@ a:link, a:visited {
         }
     }
 
+#fxos-feed {
+    transform: translate3d(0,0,0);
+}
 
 .fxos-phone {
     position: relative;
@@ -95,14 +98,15 @@ a:link, a:visited {
             box-shadow: inset scut-rem(0 2px 3px 2px) rgba(0,0,0,.75);
             border-radius: 5px;
             content: '';
-            @include scut-absolute(0 0 0 0);
+            pointer-events: none;
+            @include scut-absolute(-1px 0 0 0); // negative pixel is to fix a whitespace line at top of shadow
         }
     }
 
 // Tweet module
 .fxos-tweet {
     position: relative;
-    margin: scut-rem(3px 5px 3px 45px);
+    margin: scut-rem(5px 5px 5px 45px);
     background: #fff;
     box-shadow: scut-rem(0 2px 1px) rgba(0,0,0,.30);
     color: #4d4e53;
@@ -119,7 +123,7 @@ a:link, a:visited {
     }
 
     .fxos-tweet__user {
-        color: #4d4e53;
+        color: inherit;
         font-size: scut-rem(26px);
         font-style: italic;
         font-weight: bold;
@@ -129,7 +133,7 @@ a:link, a:visited {
     .fxos-tweet__avatar {
         display: block;
         padding: scut-rem(4px);
-        background: $primary-color;
+        background-color: $primary-color;
         border-radius: 1000px;
         box-shadow: scut-rem(0 2px 0) rgba(0,0,0,.7), inset scut-rem(0 0 2px) rgba(255,255,255,.75);
         @include scut-absolute(scut-rem(15px) n n scut-rem(-38px));
@@ -142,3 +146,30 @@ a:link, a:visited {
         font-size: scut-rem(12px);
         color: #a6a6a6;
     }
+
+// Highlighted (orange) variant
+.fxos-tweet--highlighted {
+    @extend .fxos-tweet;
+    background: $gradient-fxos-tweet-highlight;
+    color: #fff;
+
+    a:link, a:visited {
+        color: #330000;
+    }
+
+    .fxos-tweet__avatar {
+        background-color: $color-orange;
+    }
+
+    .fxos-tweet__footer {
+        border-top-color: rgba(0,0,0,.25);
+        color: #fff;
+    }
+}
+
+
+/**
+ * Slick carousel
+ */
+
+@import "vendor/slick";
