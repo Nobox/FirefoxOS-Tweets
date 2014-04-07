@@ -17,7 +17,7 @@ class Feed
 
     slide: ->
 
-        socket = io.connect()
+        socket = io.connect('http://lightsaber:3000')
         socket.on 'new_tweet', (tweet) =>
             $item = @feed.find(':first')
             amount = $item.outerHeight()

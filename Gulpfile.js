@@ -48,7 +48,10 @@ gulp.task('browserify', function () {
 /* Start the Express app */
 gulp.task('server', function () {
     var app = require('./app');
-    app.listen(EXPRESS_PORT, 'lightsaber');
+
+    app.server.listen(app.get('port'), 'lightsaber', function() {
+        console.log('Express server listening on port ' + app.get('port'));
+    });
 });
 
 /* Start Browser Sync */
