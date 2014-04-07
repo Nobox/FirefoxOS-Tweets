@@ -16,11 +16,7 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-  app.use(express.logger('dev'));
-}
+
 
 require('./routes');
 
@@ -28,6 +24,15 @@ app.server = require('http').createServer(app);
 
 var Streamer = require('./lib/streamer')(app.server);
 
-//app.server.listen(app.get('port'));
 
-module.exports = app;
+
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+  app.use(express.logger('dev'));
+  module.exports = app;
+} else {
+    app.server.listen(app.get('port'), function() {
+        console.log('Express server listening on port ' + app.get('port'));
+    });
+}
