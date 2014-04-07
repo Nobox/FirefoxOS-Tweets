@@ -25,7 +25,7 @@ bower install
 ---
 
 ##Development Environment:
-To compile CoffeeScript, SCSS files and server a test environment run the following command:
+To compile CoffeeScript, SCSS files and serve a test environment run the following command:
 ```javascript
 gulp
 ```
