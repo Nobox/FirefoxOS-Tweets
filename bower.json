@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "homepage": "https://github.com/Nobox/FirefoxOS-Tweets",
   "authors": [
-    "Waldemar Figueroa <waldemar@nobox.com>"
+    "Waldemar Figueroa <waldemar@nobox.com>",
+    "Javier Velazquez <javier@nobox.com>"
   ],
   "license": "MIT",
   "private": true,
