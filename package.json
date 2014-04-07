@@ -14,7 +14,9 @@
     "debug": "~0.8.0",
     "hjs": "~0.0.6",
     "twitter": "^0.2.9",
-    "habitat": "^1.1.0"
+    "habitat": "^1.1.0",
+    "nedb": "^0.10.5",
+    "socket.io": "^0.9.16"
   },
   "devDependencies": {
     "browser-sync": "^0.6.2",

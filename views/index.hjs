@@ -13,81 +13,23 @@
         <div class="fxos-phone">
             <div class="fxos-phone__feed">
                 <div id="fxos-feed">
-                    <div class="js-feed-entry">
-                        <article class="fxos-tweet">
-                            <div class="fxos-tweet__content">
-                                <h1 class="fxos-tweet__user">Sample User</h1>
-                                <img
-                                 class="fxos-tweet__avatar"
-                                 src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
-                                 alt="User's profile avatar">
-                                <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
-                            </div>
-                            <footer class="fxos-tweet__footer">
-                                <time datetime="">1 Apr 2013</time>
-                            </footer>
-                        </article>
-                    </div>
-                    <div class="js-feed-entry">
-                        <article class="fxos-tweet--highlighted">
-                            <div class="fxos-tweet__content">
-                                <h1 class="fxos-tweet__user">Sample User</h1>
-                                <img
-                                 class="fxos-tweet__avatar"
-                                 src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
-                                 alt="User's profile avatar">
-                                <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. Lorem ipsum Firefox sit amet, consectetur adipscing elit lorem ipsum. <a href="#">#firefoxOS</a></p>
-                            </div>
-                            <footer class="fxos-tweet__footer">
-                                <time datetime="">1 Apr 2013</time>
-                            </footer>
-                        </article>
-                    </div>
-                    <div class="js-feed-entry">
-                        <article class="fxos-tweet">
-                            <div class="fxos-tweet__content">
-                                <h1 class="fxos-tweet__user">Sample User</h1>
-                                <img
-                                 class="fxos-tweet__avatar"
-                                 src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
-                                 alt="User's profile avatar">
-                                <p>Lorem ipsum Firefox sit amet. <a href="#">#firefoxOS</a>
-                            </div>
-                            <footer class="fxos-tweet__footer">
-                                <time datetime="">1 Apr 2013</time>
-                            </footer>
-                        </article>
-                    </div>
-                    <div class="js-feed-entry">
-                        <article class="fxos-tweet">
-                            <div class="fxos-tweet__content">
-                                <h1 class="fxos-tweet__user">Sample User</h1>
-                                <img
-                                 class="fxos-tweet__avatar"
-                                 src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
-                                 alt="User's profile avatar">
-                                <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
-                            </div>
-                            <footer class="fxos-tweet__footer">
-                                <time datetime="">1 Apr 2013</time>
-                            </footer>
-                        </article>
-                    </div>
-                    <div class="js-feed-entry">
-                        <article class="fxos-tweet">
-                            <div class="fxos-tweet__content">
-                                <h1 class="fxos-tweet__user">Sample User</h1>
-                                <img
-                                 class="fxos-tweet__avatar"
-                                 src="//graph.facebook.com/waldefm/picture?width=75&amp;height=75"
-                                 alt="User's profile avatar">
-                                <p>Lorem ipsum Firefox sit amet, consectetur adipiscing elit lorem ipsum. <a href="#">#firefoxOS</a>
-                            </div>
-                            <footer class="fxos-tweet__footer">
-                                <time datetime="">1 Apr 2013</time>
-                            </footer>
-                        </article>
-                    </div>
+                    {{#tweets}}
+                        <div class="js-feed-entry">
+                            <article class="fxos-tweet">
+                                <div class="fxos-tweet__content">
+                                    <h1 class="fxos-tweet__user">{{ user.name }}</h1>
+                                    <img
+                                     class="fxos-tweet__avatar"
+                                     src="{{ user.profile_image_url_https}}"
+                                     alt="User's profile avatar">
+                                    <p>{{ text }}</p>
+                                </div>
+                                <footer class="fxos-tweet__footer">
+                                    <time datetime="">{{ created_at }}</time>
+                                </footer>
+                            </article>
+                        </div>
+                    {{/tweets}}
                 </div><!--/#fxos-feed-->
             </div>
         </div>
